@@ -14,11 +14,14 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 
-app.use(
-  cors({
-    origin: "http://localhost:5173",
-  })
-);
+const corsOptions = {
+  origin: [
+    "http://localhost:5173", // Front local
+    "https://api.render.com/deploy/srv-ct8kvbm8ii6s73cc5on0?key=TvdtoOGBbyQ", // Front desplegado en Render
+  ],
+};
+
+app.use(cors(corsOptions));
 
 app.use(express.json());
 app.use(cookieParser());

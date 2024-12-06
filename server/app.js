@@ -1,6 +1,6 @@
 import express from "express";
 import morgan from "morgan";
-import cors from "cors";
+import cors from "cors";  // Mantén solo esta línea de importación
 import { PORT } from "./config.js";
 import indexRoutes from "./routes/index.routes.js";
 import usuariosRoutes from "./routes/usuarios.routes.js";
@@ -13,8 +13,6 @@ import reviewsRoutes from "./routes/reviews.routes.js";
 import cookieParser from "cookie-parser";
 
 const app = express();
-
-const cors = require('cors');
 
 // Configuración de CORS
 const corsOptions = {
@@ -50,6 +48,6 @@ app.use(afiliadosRoutes);
 app.use(lugaresRoutes);
 app.use(negociosRoutes);
 app.use(loginRoutes);
-app.use(reviewsRoutes)
+app.use(reviewsRoutes);
 
 export default app;

@@ -20,6 +20,7 @@ const corsOptions = {
     "https://api.render.com/deploy/srv-ct8kvbm8ii6s73cc5on0?key=TvdtoOGBbyQ", // Front desplegado en Render
     "https://mi-ruta-front.onrender.com",
   ],
+  credentials: true,  // Permite el envío de credenciales (cookies, cabeceras de autenticación)
 };
 
 app.use(cors(corsOptions));

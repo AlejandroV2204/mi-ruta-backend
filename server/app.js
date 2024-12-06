@@ -17,10 +17,11 @@ const app = express();
 const corsOptions = {
   origin: [
     "http://localhost:5173", // Front local
-    "https://api.render.com/deploy/srv-ct8kvbm8ii6s73cc5on0?key=TvdtoOGBbyQ", // Front desplegado en Render
-    "https://mi-ruta-front.onrender.com",
+    "https://mi-ruta-front.onrender.com", // Front desplegado en Render
   ],
   credentials: true,  // Permite el envío de credenciales (cookies, cabeceras de autenticación)
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'], // Asegúrate de que los métodos que usas estén permitidos
+  allowedHeaders: ['Content-Type', 'Authorization'], // Asegúrate de que los encabezados sean permitidos
 };
 
 app.use(cors(corsOptions));

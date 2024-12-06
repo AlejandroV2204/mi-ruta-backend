@@ -2,11 +2,11 @@ import { createPool } from "mysql2/promise";
 
 // Crear el pool de conexiones
 const pool = createPool({
-    host: 'localhost',
-    user: 'root',
-    password: '',
+    host: 'bk2djhelqjju5ad5mdwk-mysql.services.clever-cloud.com',
+    user: 'uoqgqxmxvuokzr6p',
+    password: '0mHmSjwFxrlKvS8HXjxj',
     port: 3306,
-    database: 'mi-ruta'
+    database: 'bk2djhelqjju5ad5mdwk'
 });
 
 // Definir la función connectDB para conectarse a la base de datos
